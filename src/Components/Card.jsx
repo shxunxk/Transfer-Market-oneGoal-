@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-const FaceCard = ({ image, name, description }) => {
+const FaceCard = ({ image, name, description, date, source }) => {
     return (
       <Card sx={{ width: 345, height: 400 }}>
         <CardActionArea sx={{ height: '100%' }}>
@@ -22,6 +22,12 @@ const FaceCard = ({ image, name, description }) => {
             </Typography>
             <Typography variant="body2" color="text.secondary">
               {description}
+            </Typography>
+            <Typography variant="body2" color="text.primary">
+              Date: {date}
+            </Typography>
+            <Typography variant="body2" color="text.primary">
+             Source: {source}
             </Typography>
           </CardContent>
         </CardActionArea>

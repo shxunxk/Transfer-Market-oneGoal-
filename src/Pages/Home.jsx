@@ -354,9 +354,6 @@ export default function Home(){
   console.log(response)
   return (
     <div>
-      <div className=''>
-      <Header/>
-      </div>
       {/* <div>
         <NewsSlider/>
       </div> */}
@@ -366,7 +363,7 @@ export default function Home(){
           {response.news.length > 0 && response.news.map((item, index) => (
               <div key={index} id='news'>
                 <Link to={`./news/${item.id}`} key={index} id='news'>
-                <FaceCard image={item.newsSpotlightFirstImage||item.newsSpotlightSecondImage} name={item.title} description={item.newsHeadline} />
+                <FaceCard image={item.newsSpotlightFirstImage||item.newsSpotlightSecondImage} name={item.newsTeaser} description={item.newsHeadline} date={item.newsDate} source={item.newsSource}/>
                 </Link>
               </div>
           ))}

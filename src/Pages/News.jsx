@@ -462,9 +462,6 @@ export default function News() {
 console.log(response.news.text)
   return (
     <>
-      <div>
-        <Header />
-      </div>
       <div className='bg-slate-100 min-h-screen mx-auto'>
         <div className='w-11/12 bg-white min-h-screen mx-auto p-10'>
           {response && <><h1 className='font-bold flex flex-row justify-center text-2xl'>{response.news.headline}</h1><p className='flex flex-row justify-center text-xl'>~{response.news.source}</p></>}
@@ -479,7 +476,6 @@ console.log(response.news.text)
             const textContent = parseHtmlToText(htmlString);
             return <p key={key} className='text-lg font-semibold'>{textContent}</p>;
         })}
-          {response.news.text.text-0}
           <div className = 'flex flex-row p-10'>
             {response && <img src={response.news.firstImage} alt="News Image" className='h-96 w-30 mx-auto' />}
             {response && <img src={response.news.secondImage} alt="News Image" className='h-96 w-30 mx-auto' />}
