@@ -1,9 +1,8 @@
-import Header from '../Components/Header.jsx'
 import FaceCard from '../Components/Card.jsx'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NewsSlider from '../Components/NewsSlider.jsx';
+// import NewsSlider from '../Components/NewsSlider.jsx';
 
 export default function Home(){
 
@@ -334,7 +333,7 @@ export default function Home(){
         url: 'https://transfermarket.p.rapidapi.com/news/list-latest',
         params: {domain: 'de'},
         headers: {
-          'X-RapidAPI-Key': 'process.env.TransferMarket',
+          'X-RapidAPI-Key': 'process.env.rapidApi',
           'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com'
         }
       };

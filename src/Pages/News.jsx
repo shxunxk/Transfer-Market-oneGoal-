@@ -1,4 +1,3 @@
-import Header from '../Components/Header';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -436,7 +435,7 @@ export default function News() {
         url: 'https://transfermarket.p.rapidapi.com/news/detail',
         params: { id: id },
         headers: {
-          'X-RapidAPI-Key': 'process.env.TransferMarket',
+          'X-RapidAPI-Key': 'process.env.rapidApi',
           'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com'
         }
       };
@@ -476,7 +475,7 @@ console.log(response.news.text)
             const textContent = parseHtmlToText(htmlString);
             return <p key={key} className='text-lg font-semibold'>{textContent}</p>;
         })}
-          <div className = 'flex flex-row p-10'>
+          <div className = 'flex flex-row p-10 justify-center'>
             {response && <img src={response.news.firstImage} alt="News Image" className='h-96 w-30 mx-auto' />}
             {response && <img src={response.news.secondImage} alt="News Image" className='h-96 w-30 mx-auto' />}
           </div>
