@@ -5,6 +5,8 @@ import News from './Pages/News.jsx';
 import Header from './Components/Header.jsx';
 import CountriesList from './Pages/Countries.jsx';
 import Highlights from './Pages/Matches.jsx';
+import Match from './Pages/Match.jsx';
+import MatchDetail from './Pages/MatchDetail.jsx';
 
 function App() {
 
@@ -16,7 +18,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/news/:id' element={<News/>}/>
         <Route path='/country' element={<CountriesList/>}/>
-        <Route path='/matches' element={<Highlights/>}/>
+        <Route path='/streams' element={<Highlights/>}/>
+        <Route path='/match' element={<Match/>}/>
+        <Route path='/matchDetails' element={<MatchDetail/>}/>
       </Routes>
     </Router>
     </>
