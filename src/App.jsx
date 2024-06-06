@@ -7,6 +7,7 @@ import CountriesList from './Pages/Countries.jsx';
 import Highlights from './Pages/Matches.jsx';
 import Match from './Pages/Match.jsx';
 import MatchDetail from './Pages/MatchDetail.jsx';
+import Details from './Pages/Details.jsx';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
         <Route path='/country' element={<CountriesList/>}/>
         <Route path='/streams' element={<Highlights/>}/>
         <Route path='/match' element={<Match/>}/>
-        <Route path='/matchDetails' element={<MatchDetail/>}/>
+        <Route path='/matchDetails/:id' element={<MatchDetail/>}/>
+        <Route path='/details' element={<Details/>}/>
       </Routes>
     </Router>
     </>

@@ -357,7 +357,7 @@ export default function Home(){
         <NewsSlider/>
       </div> */}
       <div className='bg-slate-100 min-h-screen'>
-        <h1 className='text-3xl text-bold w-11/12 mx-auto bg-white p-16 pb-0'>Latest News</h1>
+        <h1 className='text-3xl text-bold w-11/12 mx-auto bg-white p-16'>Latest News</h1>
         <div className='grid grid-cols-3 w-11/12 mx-auto bg-white min-h-screen p-16 gap-10'>
           {response.news.length > 0 && response.news.map((item, index) => (
               <div key={index} id='news'>

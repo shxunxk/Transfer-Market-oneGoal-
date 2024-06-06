@@ -666,6 +666,8 @@ export default function Match() {
     // fetchData()
     },[])
 
+    console.log(matches.liveMatches.BE1[0].id)
+
   return (
     <div className='bg-slate-100 min-h-screen mx-auto'>
           <div className='w-11/12 bg-white min-h-screen mx-auto p-10'>
@@ -677,12 +679,13 @@ export default function Match() {
           <div className='border-2 border-black rounded-lg p-10 flex flex-col items-center justify-center gap-y-10 font-bold'>
             {matches.liveMatches[category].map(match => (
               <div key={match.id} className='w-2/3 border-2 border-black rounded-lg p-7 text-center flex flex-col items-center justify-center gap-y-10'>
+                {console.log(match)}
                 <h2 className='text-2xl'>{match.competitionName}</h2>
                 <img src={match.competitionImage} className='h-30 w-30'/>
                 <p className='font-bold flex flex-row gap-x-6 text-center items-center' ><p className='flex flex-col items-center'><img src={match.homeClubImage} className='h-16 w-16'/>{match.homeClubName}</p> <p> VS </p> <p><img src={match.awayClubImage} className='h-16 w-16'/>{match.awayClubName}</p></p>
                 <p>Date: {match.matchDate}</p>
                 <p>Time: {match.matchTime}</p>
-                <Link to={`./matchDetails/${match.id}`}><p className="text-blue-800">View Details</p></Link>
+                <Link to={`/matchDetails/${[match.id, match.homeClubName,match.awayClubName]}`}><p className="text-blue-800">View Details</p></Link>
               </div>
             ))}
           </div>
