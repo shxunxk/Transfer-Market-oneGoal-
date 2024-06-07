@@ -11,7 +11,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl p-6 lg:px-8" aria-label="Global">
         <div className="flex flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            <img className="h-8 w-auto" src="vite.svg" alt="" />
+            <img className="h-8 w-auto" src="logo.png" alt="" />
           </a>
         </div>
         <PopoverGroup className="flex gap-12">

@@ -11,7 +11,7 @@ const Dropdown = ({ competition, selectedData }) => {
 
   return (
     <select
-      className="text-center border-2 border-black rounded-md"
+      className="text-center border rounded-md bg-slate-100"
       value={selected}
       onChange={handleChange}
     >

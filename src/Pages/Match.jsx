@@ -663,24 +663,22 @@ export default function Match() {
               console.error(error);
           }
     }
-    // fetchData()
+    fetchData()
     },[])
 
     console.log(matches.liveMatches.BE1[0].id)
 
   return (
-    <div className='bg-slate-100 min-h-screen mx-auto'>
+    <div className='bg-slate-100 min-h-screen'>
+                <h1 className='text-3xl text-bold w-11/12 mx-auto bg-white p-16 pb-0'>Live Matches</h1>
           <div className='w-11/12 bg-white min-h-screen mx-auto p-10'>
-          <h1 className='text-3xl text-bold w-11/12 mx-auto bg-white p-16 pb-0'>Live Matches</h1>
       {Object.keys(matches.liveMatches).map((category,index) => (
         category !== 'sort' && (
-        <div key={category} className='py-10'>
-          <h2 className='mb-5 text-2xl font-bold'>{matches.liveMatches.sort[index].competitionName}</h2>
-          <div className='border-2 border-black rounded-lg p-10 flex flex-col items-center justify-center gap-y-10 font-bold'>
+        <div key={category} className='py-10 justify-center'>
+          <h2 className='p-16 text-2xl font-bold text-center'>{matches.liveMatches.sort[index].competitionName}</h2>
+          <div className='grid grid-cols-2 rounded-lg p-10 place-items-center items-center justify-center gap-y-10 font-bold border bg-slate-100'>
             {matches.liveMatches[category].map(match => (
-              <div key={match.id} className='w-2/3 border-2 border-black rounded-lg p-7 text-center flex flex-col items-center justify-center gap-y-10'>
-                {console.log(match)}
-                <h2 className='text-2xl'>{match.competitionName}</h2>
+              <div key={match.id} className='w-2/3 rounded-lg p-7 text-center flex flex-col items-center justify-center gap-y-10'>
                 <img src={match.competitionImage} className='h-30 w-30'/>
                 <p className='font-bold flex flex-row gap-x-6 text-center items-center' ><p className='flex flex-col items-center'><img src={match.homeClubImage} className='h-16 w-16'/>{match.homeClubName}</p> <p> VS </p> <p><img src={match.awayClubImage} className='h-16 w-16'/>{match.awayClubName}</p></p>
                 <p>Date: {match.matchDate}</p>

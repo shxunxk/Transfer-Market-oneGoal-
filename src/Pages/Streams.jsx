@@ -471,14 +471,14 @@ export default function Highlights() {
     }
 
     return (
-      <div className='bg-slate-100 min-h-screen mx-auto'>
-          <div className='w-11/12 bg-white min-h-screen mx-auto p-10'>
-          <h1 className='text-3xl text-bold w-11/12 mx-auto bg-white p-6 pb-0'>Live Matches and Highlights</h1>
+      <div className='bg-slate-100 min-h-screen'>
+                  <h1 className='text-3xl text-bold w-11/12 mx-auto bg-white p-16 pb-0'>Live Streams and Highlights</h1>
+          <div className='flex flex-col w-11/12 bg-white p-16 mx-auto'>
           <div className='p-20 flex justify-center'>
-            <p className='font-bold text-md'>League : </p><Dropdown competition = {competition} selectedData={selectedData}/>
+            <p className='font-bold text-md'>League</p>: <Dropdown competition = {competition} selectedData={selectedData}/>
           </div>
           {filteredData.map((item, index)=>(
-              <div key={index} className='flex flex-col items-center p-5 border-2 border border-black m-4 rounded-md'>
+              <div key={index} className='flex flex-col items-center p-5 border bg-slate-100 m-4 rounded-md mb-20'>
                 <h1 className='p-6 text-2xl font-bold'>{item.title}</h1>
                 <h1 className='p-6 text-xl flex flex-row'><p className='font-bold'>League :</p><a href={item.competition.url}>{ item.competition.name}</a></h1>
                 <p className='font-bold'>Date: {item.date.split('T')[0]} Time: {item.date.split('T')[1].split('+')[0]} GMT</p>
